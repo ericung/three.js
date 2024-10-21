@@ -354,7 +354,7 @@ class OutlineNode extends TempNode {
 				weightSum.addAssign( w.mul( 2 ) );
 				uvOffset.addAssign( delta );
 
-			} );
+			} );
 
 			return diffuseSum.div( weightSum );
 
@@ -431,4 +431,4 @@ class OutlineNode extends TempNode {
 
 export default OutlineNode;
 
-export const outline = ( scene, camera, selectedObjects ) => nodeObject( new OutlineNode( scene, camera, selectedObjects ) );
+export const outline = ( scene, camera, params ) => nodeObject( new OutlineNode( scene, camera, params ) );
